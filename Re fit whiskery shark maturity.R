@@ -1,4 +1,5 @@
-Dat=read.csv("C:/Matias/Data/Life history parameters/Maturity_whisk_Simpfendorferetal1998.csv")
+handl_OneDrive=function(x)paste('C:/Users/myb/OneDrive - Department of Primary Industries and Regional Development/Matias',x,sep='/')
+Dat=read.csv(handl_OneDrive("Data/Life history parameters/Maturity_whisk_Simpfendorferetal1998.csv"))
 
 mod <- nls(Prop.Mat~1/(1+exp(-log(19)*(FL-p50)/(p95-p50))), start=c(p50=115, p95=120), data=Dat)
 
